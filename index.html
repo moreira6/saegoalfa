@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Simulado de Língua Portuguesa e Matemática para o 5º ano.">
+<title>Simulado 5º ano | Português e Matemática</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brand-icon">✏️</span><span>Aprender é descobrir</span></div><span class="grade">5º ANO</span></header>
+<main>
+<section id="intro" class="panel intro">
+  <div class="hero-icon">📚</div>
+  <p class="eyebrow">AVALIAÇÃO DE APRENDIZAGEM</p>
+  <h1>Simulado do 5º ano</h1>
+  <p class="subtitle">Português e Matemática</p>
+  <p class="intro-copy">Leia com atenção, pense com calma e escolha a alternativa que considerar correta. Você pode voltar às questões antes de finalizar.</p>
+  <div class="stats"><div><strong>30</strong><span>questões</span></div><div><strong>2</strong><span>disciplinas</span></div><div><strong>1</strong><span>ponto por questão</span></div></div>
+  <label for="student">Nome do estudante</label><input id="student" type="text" placeholder="Digite seu nome" maxlength="80">
+  <label for="school">Escola (opcional)</label><input id="school" type="text" placeholder="Nome da escola" maxlength="100">
+  <p id="nameError" class="error" aria-live="polite"></p>
+  <button id="start" class="primary full">Começar simulado <span>→</span></button>
+  <p class="footnote">Questões autorais inspiradas no estilo de avaliações externas. Não é uma prova oficial do SAEGO.</p>
+</section>
+
+<section id="quiz" class="hidden">
+  <div class="quiz-heading"><div><p class="eyebrow">SIMULADO · 5º ANO</p><h1>Vamos praticar!</h1></div><div class="answered" id="answeredCount">0 respondidas</div></div>
+  <div class="progress-wrap"><div class="progress-meta"><span id="counter">Questão 1 de 30</span><span id="subjectTag" class="subject-tag">Língua Portuguesa</span></div><div class="progress"><div id="progressFill"></div></div></div>
+  <article class="question-card">
+    <div class="question-label">QUESTÃO <span id="questionNumber">01</span></div>
+    <div id="passage" class="passage hidden"></div>
+    <h2 id="questionText"></h2>
+    <p class="instruction">Marque apenas uma alternativa.</p>
+    <div id="options" class="options"></div>
+  </article>
+  <div class="navigation"><button id="prev" class="secondary" disabled>← Anterior</button><button id="next" class="primary">Próxima questão →</button></div>
+</section>
+
+<section id="results" class="hidden">
+  <div class="result-hero">
+    <div class="hero-icon">🏆</div><p class="eyebrow">SIMULADO CONCLUÍDO</p><h1>Muito bem por chegar até aqui!</h1>
+    <p id="studentResult" class="student-name"></p><p id="schoolResult" class="muted"></p>
+    <div class="score" id="score">0/30</div><p id="percent" class="subtitle"></p>
+    <div class="stats result-stats"><div><strong id="correctCount">0</strong><span>acertos</span></div><div><strong id="wrongCount">0</strong><span>não acertadas</span></div></div>
+  </div>
+  <div class="review-heading"><h2>Correção das questões</h2><p>Confira as respostas e leia as explicações.</p></div>
+  <div id="review" class="review-list"></div>
+  <button id="restart" class="primary full">Refazer simulado ↻</button>
+</section>
+</main>
+<footer>Material de prática pedagógica · 5º ano do Ensino Fundamental</footer>
+<script src="app.js"></script>
+</body>
+</html>
